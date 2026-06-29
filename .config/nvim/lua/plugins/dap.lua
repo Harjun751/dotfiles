@@ -65,6 +65,8 @@ return {
           runtimeExecutable = "npm",
           runtimeArgs = { "run", pick_script },
           cwd = "${workspaceFolder}",
+          console = "integratedTerminal",
+          internalConsoleOptions = "neverOpen",
         },
       }
     end
