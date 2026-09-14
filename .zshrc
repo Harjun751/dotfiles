@@ -103,3 +103,18 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias config='/usr/bin/git --git-dir=/home/arj/.cfg/ --work-tree=/home/arj'
+alias open="xdg-open"
+alias sch="cd ~/School/Y3/1\ -\ SEM/"
+alias mv="mv -i"
+
+if uwsm check may-start; then
+	exec uwsm start hyprland.desktop
+fi
+
+# opencode
+export PATH=/home/arjun/.opencode/bin:$PATH
+export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
+
+eval "$(zoxide init zsh)"
+
+# Load soclass

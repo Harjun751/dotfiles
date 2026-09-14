@@ -5,5 +5,12 @@ return {
       ["markdown"] = { "prettier" },
       ["python"] = { "black" },
     },
+    formatters = {
+      prettier = {
+        cwd = require("conform.util").root_file({
+          ".prettierrc"
+        })
+      }
+    }
   },
 }
