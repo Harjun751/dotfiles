@@ -8,9 +8,10 @@ return {
     formatters = {
       prettier = {
         cwd = require("conform.util").root_file({
-          ".prettierrc"
-        })
-      }
-    }
+          ".prettierrc",
+        }),
+        prepend_args = { "--print-width", "80", "--prose-wrap", "always" },
+      },
+    },
   },
 }
