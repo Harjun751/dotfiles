@@ -117,4 +117,8 @@ export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 
 eval "$(zoxide init zsh)"
 
+
 # Load soclass
+
+# nvm - uncomment when needed. noticeably slows down launch
+# source /usr/share/nvm/init-nvm.sh
