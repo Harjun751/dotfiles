@@ -1,0 +1,55 @@
+@define-color primary rgba(61, 51, 86, 0.5);
+@define-color on-primary #e8e5cf;
+@define-color on-primary-darker #6f6d60;
+@define-color error #e01d19;
+
+* {
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family: "SauceCodePro Nerd Font", monospace;
+  font-size: 13px;
+}
+
+window#waybar {
+  background-color: @primary;
+  border-bottom: 2px solid black;
+  color: @on-primary;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+
+#workspaces button {
+  padding: 0 5px;
+  background-color: transparent;
+  color: @on-primary-darker;
+}
+
+#workspaces button:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+  color: @on-primary;
+}
+
+#workspaces button.urgent {
+  background-color: @error;
+  box-shadow: inset 0 -0.5px @error;
+}
+
+#custom-clock,
+#battery,
+#network,
+#pulseaudio,
+#memory {
+  padding: 0 5px;
+}
+
+#network.disconnected {
+  color: @error;
+}

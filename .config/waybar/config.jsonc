@@ -1,0 +1,83 @@
+// -*- mode: jsonc -*-
+{
+  "height": 28, // Waybar height (to be removed for auto height)
+  "spacing": 4, // Gaps between modules (4px)
+
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["custom/clock", "network"],
+  "modules-right": ["pulseaudio", "custom/delim", "cpu", "custom/delim", "memory", "custom/delim", "battery"],
+
+  // Clock with sun/moon icons based on time of day (see clock.sh)
+  "custom/clock": {
+    "exec": "$HOME/.config/waybar/custom_modules/clock.sh",
+    "interval": 30,
+    "return-type": "json",
+    "tooltip": false,
+  },
+
+  "custom/delim": {
+    "format": "::",
+    "interval": "once",
+    "tooltip": false,
+  },
+
+  "custom/bat": {
+    "exec": "$HOME/.config/waybar/custom_modules/battery.sh",
+    "interval": 60,
+    "return-type": "json",
+    "escape": false,
+    "tooltip": false,
+  },
+  "hyprland/workspaces": {
+    "format": "[{id}]",
+  },
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format-wifi": "{icon}",
+    "format-icons": [
+      "\udb82\udd1f",
+      "\udb82\udd22",
+      "\udb82\udd25",
+      "\udb82\udd28"
+    ],
+    "format-ethernet": "\udb80\ude01",
+    "tooltip-format": "{essid} [{ipaddr}]\n{ifname} [{gwaddr}]",
+    "format-linked": "\udb80\ude02",
+    "format-disconnected": "\udb82\udd2e",
+  },
+  "pulseaudio": {
+    "format": "VOL {icon} [{volume}%]",
+    "format-icons": [
+      "\udb81\udd7f",
+      "\udb81\udd80",
+      "\udb81\udd7e"
+    ],
+    "format-muted": "\udb81\udd81"
+  },
+  "memory": {
+    "format": "MEM {icon} [{used}G]",
+    "format-icons": [
+      "\uee00\uee01\uee01\uee01\uee02",
+      "\uee03\uee01\uee01\uee01\uee02",
+      "\uee03\uee04\uee01\uee01\uee02",
+      "\uee03\uee04\uee04\uee01\uee02",
+      "\uee03\uee04\uee04\uee04\uee02",
+      "\uee03\uee04\uee04\uee04\uee05",
+    ],
+  },
+  "battery": {
+    "format": "BAT {icon} [{capacity}%]",
+    "format-icons": [
+      "\uee00\uee01\uee01\uee01\uee02",
+      "\uee03\uee01\uee01\uee01\uee02",
+      "\uee03\uee04\uee01\uee01\uee02",
+      "\uee03\uee04\uee04\uee01\uee02",
+      "\uee03\uee04\uee04\uee04\uee02",
+      "\uee03\uee04\uee04\uee04\uee05",
+    ],
+  },
+  "cpu": {
+    "format": "CPU {icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7} [{usage:>2}%]",
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+  },
+}
