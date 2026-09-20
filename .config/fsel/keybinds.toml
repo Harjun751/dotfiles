@@ -1,0 +1,2 @@
+down = ["down", { key="d", modifiers= "ctrl " }, { key="j", modifiers= "ctrl " }]
+up = ["up", { key="u", modifiers= "ctrl " }, { key="k", modifiers= "ctrl " }]
