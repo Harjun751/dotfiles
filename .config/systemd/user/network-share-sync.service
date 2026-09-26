@@ -1,0 +1,6 @@
+[Unit]
+Description=Synchronize local directory with network share
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/unison Y3

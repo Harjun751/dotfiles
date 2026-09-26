@@ -1,0 +1,10 @@
+[Unit]
+Description=Periodically synchronize network share
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=60min
+Persistent=true
+
+[Install]
+WantedBy=timers.target
