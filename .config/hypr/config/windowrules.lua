@@ -178,3 +178,24 @@ hl.window_rule({
 	pin = true,
 	size = { "650", "300" },
 })
+hl.window_rule({
+	match = { title = "vol-mix-pop" },
+	float = true,
+	pin = true,
+	size = { "650", "200" },
+	move = { "monitor_w * 0.5", "30" },
+})
+hl.window_rule({
+	match = { title = "nw-pop" },
+	float = true,
+	pin = true,
+	size = { "650", "900" },
+	move = { "monitor_w * 0.5", "30" },
+})
+hl.window_rule({
+	match = { title = "power-profile-pop" },
+	float = true,
+	pin = true,
+	size = { "350", "350" },
+	move = { "monitor_w * 1 - 355", "30" },
+})
