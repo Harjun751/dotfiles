@@ -1,0 +1,8 @@
+root = /home/arjun/School/
+root = /mnt/School/
+
+auto = true
+batch = true
+confirmbigdel = false
+prefer = newer
+perms = 0
