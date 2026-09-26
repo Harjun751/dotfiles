@@ -5,7 +5,15 @@
 
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["custom/clock", "network"],
-  "modules-right": ["pulseaudio", "custom/delim", "cpu", "custom/delim", "memory", "custom/delim", "battery"],
+  "modules-right": [
+    "pulseaudio",
+    "custom/delim",
+    "cpu",
+    "custom/delim",
+    "memory",
+    "custom/delim",
+    "battery",
+  ],
 
   // Clock with sun/moon icons based on time of day (see clock.sh)
   "custom/clock": {
@@ -38,21 +46,19 @@
       "\udb82\udd1f",
       "\udb82\udd22",
       "\udb82\udd25",
-      "\udb82\udd28"
+      "\udb82\udd28",
     ],
     "format-ethernet": "\udb80\ude01",
     "tooltip-format": "{essid} [{ipaddr}]\n{ifname} [{gwaddr}]",
     "format-linked": "\udb80\ude02",
     "format-disconnected": "\udb82\udd2e",
+    "on-click": "foot --title nw-pop wlctl",
   },
   "pulseaudio": {
     "format": "VOL {icon} [{volume}%]",
-    "format-icons": [
-      "\udb81\udd7f",
-      "\udb81\udd80",
-      "\udb81\udd7e"
-    ],
-    "format-muted": "\udb81\udd81"
+    "format-icons": ["\udb81\udd7f", "\udb81\udd80", "\udb81\udd7e"],
+    "format-muted": "VOL \udb81\udd81 [MUTE]",
+    "on-click": "foot --title vol-mix-pop wiremix",
   },
   "memory": {
     "format": "MEM {icon} [{used}G]",
@@ -67,6 +73,7 @@
   },
   "battery": {
     "format": "BAT {icon} [{capacity}%]",
+    "format-charging": "CHR {icon} [{capacity}%]",
     "format-icons": [
       "\uee00\uee01\uee01\uee01\uee02",
       "\uee03\uee01\uee01\uee01\uee02",
@@ -75,6 +82,7 @@
       "\uee03\uee04\uee04\uee04\uee02",
       "\uee03\uee04\uee04\uee04\uee05",
     ],
+    "on-click": "foot --title power-profile-pop sh $HOME/.config/waybar/custom_modules/profile_picker.sh",
   },
   "cpu": {
     "format": "CPU {icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7} [{usage:>2}%]",

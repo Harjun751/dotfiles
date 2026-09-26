@@ -1,4 +1,4 @@
-@define-color primary rgba(61, 51, 86, 0.5);
+@define-color primary #20192b;
 @define-color on-primary #e8e5cf;
 @define-color on-primary-darker #6f6d60;
 @define-color error #e01d19;
@@ -11,7 +11,7 @@
 
 window#waybar {
   background-color: @primary;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   color: @on-primary;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -20,7 +20,6 @@ window#waybar {
 window#waybar.hidden {
   opacity: 0.2;
 }
-
 
 #workspaces button {
   padding: 0 5px;
