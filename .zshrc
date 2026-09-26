@@ -102,9 +102,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias config='/usr/bin/git --git-dir=/home/arj/.cfg/ --work-tree=/home/arj'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias open="xdg-open"
-alias sch="cd ~/School/Y3/1\ -\ SEM/"
+alias sch="cd ~/School/Y3/1\ -\ Sem/"
 alias mv="mv -i"
 
 if uwsm check may-start; then
@@ -122,3 +122,5 @@ eval "$(zoxide init zsh)"
 
 # nvm - uncomment when needed. noticeably slows down launch
 # source /usr/share/nvm/init-nvm.sh
+#
+export PATH="$PATH:/home/arjun/.cargo/bin:/home/arjun/.local/bin"
