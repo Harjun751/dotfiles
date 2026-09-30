@@ -12,7 +12,7 @@ CLIPBOARD =
 VOLUME = "foot --title vol-mix wiremix"
 
 -- Monitors
-MONITOR1 = ""
+MONITOR1 = "eDP-1"
 MONITOR2 = ""
 MONITOR3 = ""
 PRIMARY_MONITOR = MONITOR1
